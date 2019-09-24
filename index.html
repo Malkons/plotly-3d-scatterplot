@@ -1,0 +1,94 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Plotly 3D scatterplot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="myDiv">
+                    <!-- Plotly chart will be drawn inside this DIV -->
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body info">
+                        <button class="model-year margin" onclick="makeplot()">Draw Graph</button>
+                        <div id="vertical" class="card-text margin"></div>
+                        <div id="horizontal" class="card-text margin"></div>
+                        <div id="color" class="card-text margin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dependent Variable
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button value="mpg" class="mpg" onclick="verticalAxis(value)">MPG</button>
+                        <button value="cylinders" class="cylinders" onclick="verticalAxis(value)">Cylinders</button>
+                        <button value="displacement" class="displacement"
+                            onclick="verticalAxis(value)">Displacement</button>
+                        <button value="horsepower" class="horsepower" onclick="verticalAxis(value)">Horsepower</button>
+                        <button value="weight" class="weight" onclick="verticalAxis(value)">Weight</button>
+                        <button value="acceleration" class="acceleration"
+                            onclick="verticalAxis(value)">Acceleration</button>
+                        <button value="model-year" class="model-year" onclick="verticalAxis(value)">Model-year</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Independent Variable
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button value="mpg" class="mpg" onclick="horizontalAxis(value)">MPG</button>
+                        <button value="cylinders" class="cylinders" onclick="horizontalAxis(value)">Cylinders</button>
+                        <button value="displacement" class="displacement"
+                            onclick="horizontalAxis(value)">Displacement</button>
+                        <button value="horsepower" class="horsepower"
+                            onclick="horizontalAxis(value)">Horsepower</button>
+                        <button value="weight" class="weight" onclick="horizontalAxis(value)">Weight</button>
+                        <button value="acceleration" class="acceleration"
+                            onclick="horizontalAxis(value)">Acceleration</button>
+                        <button value="model-year" class="model-year"
+                            onclick="horizontalAxis(value)">Model-year</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Color Variable
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button value="mpg" class="mpg" onclick="colorAxis(value)">MPG</button>
+                        <button value="cylinders" class="cylinders" onclick="colorAxis(value)">Cylinders</button>
+                        <button value="displacement" class="displacement"
+                            onclick="colorAxis(value)">Displacement</button>
+                        <button value="horsepower" class="horsepower" onclick="colorAxis(value)">Horsepower</button>
+                        <button value="weight" class="weight" onclick="colorAxis(value)">Weight</button>
+                        <button value="acceleration" class="acceleration"
+                            onclick="colorAxis(value)">Acceleration</button>
+                        <button value="model-year" class="model-year" onclick="colorAxis(value)">Model-year</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="popper.js"></script>
+        <script type="text/javascript" src="js.js"></script>
+</body>
