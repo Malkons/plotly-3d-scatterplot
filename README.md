@@ -1,3 +1,3 @@
 # plotly-3d-scatterplot
 
-View the deployed site: [here](https://github.com/Malkons/plotly-3d-scatterplot/settings)
+View the deployed site: [here](https://malkons.github.io/plotly-3d-scatterplot/)
